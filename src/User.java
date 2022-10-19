@@ -66,7 +66,7 @@ public class User {
 	public void printAccountSummary() {
 		System.out.printf("\n\n%s's accounts summary", this.firstName);
 		for (int a = 0; a < this.accounts.size(); a++) {
-			System.out.printf("(%d) %s\n", this.accounts.get(a).getSummaryLine());
+			System.out.printf("(%d) %s\n", a+1, this.accounts.get(a).getSummaryLine());
 		}
 		System.out.println();
 	}
@@ -76,6 +76,14 @@ public class User {
 	 */
 	public void addAccount(Account account) {
 		this.accounts.add(account);
+	}
+	
+	/**
+	 * Get the number of accounts of the user
+	 * @return	number of accounts (array list)
+	 */
+	public int numAccounts() {
+		return this.accounts.size();
 	}
 	
 	/**
