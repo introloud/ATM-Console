@@ -110,6 +110,26 @@ public class User {
 	public double getAccBalance(int accIdx) {
 		return this.accounts.get(accIdx).getBalance();
 	}
+	
+	/**
+	 * Get the UUID of a particular account
+	 * @param accIdx	the index of the account to use
+	 * @return			UUID of the account
+	 */
+	public String getAccUUID(int accIdx) {
+		return this.accounts.get(accIdx).getUUID();
+	}
+	
+	/**
+	 * Add the transaction to a particular account
+	 * @param accIdx	index of the account to put in
+	 * @param amount	amount to add
+	 * @param memo		memo to add
+	 */
+	public void addAccTransaction(int accIdx, double amount, String memo) {
+		this.accounts.get(accIdx).addTransaction(amount, memo);
+	}
+	
 	/**
 	 * Check whether a given pin matches the true User pin
 	 * @param pin	the pin to check
