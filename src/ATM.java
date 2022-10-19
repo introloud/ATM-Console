@@ -104,6 +104,11 @@ public class ATM {
 		}
 	}
 	
+	/**
+	 * Show the transaction history for an account
+	 * @param theUser	the logged-in User object
+	 * @param scr		the Scanner object used for user input
+	 */
 	public static void showTransHistory (User theUser, Scanner scr) {
 		
 		int theAcc;
@@ -121,4 +126,50 @@ public class ATM {
 		// print the transaction history
 		theUser.printAccTransHistory(theAcc);
 	}
+	
+	public static void transferFunds(User theUser, Scanner scr) {
+		
+		int fromAcc;
+		int toAcc;
+		double amount;
+		double accBal;
+		
+		// get the account to transfer from
+		do {
+			System.out.printf("Enter the number (1-%d) of the account\n" +
+					"to transfer from: ");
+			fromAcc = scr.nextInt() - 1;
+			if (fromAcc < 0 || fromAcc >= theUser.numAccounts()) {
+				System.out.println("Invalid account. Please try again");
+			}
+		}while(fromAcc < 0 || fromAcc >= theUser.numAccounts());
+		
+		accBal = theUser.getAccBalance(fromAcc);
+		
+		// get the account to transfer to
+		do {
+			System.out.printf("Enter the number (1-%d) of the account\n" +
+					"to transfer to: ");
+			toAcc = scr.nextInt() - 1;
+			if (toAcc < 0 || toAcc >= theUser.numAccounts()) {
+				System.out.println("Invalid account. Please try again");
+			}
+		}while(toAcc < 0 || toAcc >= theUser.numAccounts());
+		
+		// get the amount to transfer
+		do {
+			System.out.printf("Enter the amount to transfer (max $%.02f): $", accBal);
+			amount = scr.nextDouble();
+			if (amount < 0) {
+				System.out.println("Amount must be greater than zero.");
+			} else if (amount > accBal) {
+				System.out.printf("Amount must not be greater than\n" +
+						"balance of %.02f.\n", accBal);
+			}
+		} while (amount < 0 || amount > accBal)
+			
+		// finally, do the transfer
+		
+	}
+	
 }
