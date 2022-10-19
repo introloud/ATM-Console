@@ -95,6 +95,13 @@ public class User {
 	}
 	
 	/**
+	 * Print transaction history for a particular account
+	 * @param accIdx	the index of the account to use
+	 */
+	public void printAccTransHistory(int accIdx) {
+		this.accounts.get(accIdx).printTransHistory();
+	}
+	/**
 	 * Check whether a given pin matches the true User pin
 	 * @param pin	the pin to check
 	 * @return		whether the pin is valid or not
