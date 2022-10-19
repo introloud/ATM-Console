@@ -53,6 +53,14 @@ public class User {
 	}
 	
 	/**
+	 * Get the first name of the user
+	 * @return	firstName
+	 */
+	public String getFirstName() {
+		return this.firstName;
+	}
+	
+	/**
 	 * Add an account for the user
 	 * @param account	the account to add
 	 */
