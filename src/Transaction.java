@@ -39,5 +39,12 @@ public class Transaction {
 		
 		this.memo = memo;
 	}
-
+	
+	/**
+	 * Get the amount of the transaction
+	 * @return	amount
+	 */
+	public double getAmount() {
+		return this.amount;
+	}
 }
