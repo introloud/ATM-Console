@@ -23,7 +23,7 @@ public class ATM {
 			currentUser = ATM.mainMenuPrompt(theBank, scr);
 			
 			//stay in main menu until user quits
-			//ATM.printUserMenu(currentUser, scr);
+			ATM.printUserMenu(currentUser, scr);
 			
 		}
 	}
@@ -56,5 +56,51 @@ public class ATM {
 		} while( authUser == null);
 		
 		return authUser;
+	}
+	
+	public static void printUserMenu(User theUser, Scanner scr) {
+		
+		// print a summary of the user's accounts
+		theUser.printAccountSummary();
+		
+		int choice;
+		
+		// user menu
+		do {
+			System.out.printf("Welcome %s, what would you like to do?", theUser.getFirstName());
+			System.out.println("	1) Show account transaction history");
+			System.out.println("	2) Withdrawl");
+			System.out.println("	3) Deposit");
+			System.out.println("	4) Transfer");
+			System.out.println("	5) Quit");
+			System.out.println();
+			System.out.print("Enter choice: ");
+			choice = scr.nextInt();
+			
+			if(choice < 1 || choice > 5) {
+				System.out.println("Invalid choice. Please choose 1-5");
+			}
+		} while(choice < 1 || choice > 5);
+		
+		//choices
+		switch (choice) {
+		case 1:
+			ATM.showTransHistory(theUser, scr);
+			break;
+		case 2:
+			ATM.withdrawlFunds(theUser, scr);
+			break;
+		case 3:
+			ATM.depositFunds(theUser, scr);
+			break;
+		case 4:
+			ATM.transferFunds(theUser, scr);
+			break;
+		}
+		
+		//redisplay this menu unless the user wants to quit
+		if (choice != 5) {
+			ATM.printUserMenu(theUser, scr);
+		}
 	}
 }
