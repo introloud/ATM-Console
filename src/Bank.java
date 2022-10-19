@@ -8,6 +8,16 @@ public class Bank {
 	private ArrayList<User> users;
 	
 	private ArrayList<Account> accounts;
+	
+	/**
+	 * Create a new Bank object
+	 * @param name	name of the bank
+	 */
+	public Bank(String name) {
+		this.name = name;
+		this.users = new ArrayList<User>();
+		this.accounts = new ArrayList<Account>();
+	}
 
 	/**
 	 * Generate a new universally unique ID for a user
