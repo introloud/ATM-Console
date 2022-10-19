@@ -101,6 +101,15 @@ public class User {
 	public void printAccTransHistory(int accIdx) {
 		this.accounts.get(accIdx).printTransHistory();
 	}
+	
+	/**
+	 * Get the balance of a particular account
+	 * @param accIdx	the index of the account to use
+	 * @return			balance of the account
+	 */
+	public double getAccBalance(int accIdx) {
+		return this.accounts.get(accIdx).getBalance();
+	}
 	/**
 	 * Check whether a given pin matches the true User pin
 	 * @param pin	the pin to check
