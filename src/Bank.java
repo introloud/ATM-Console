@@ -20,6 +20,14 @@ public class Bank {
 	}
 
 	/**
+	 * Get the name of the bank
+	 * @return	name
+	 */
+	public String getName() {
+		return this.name;
+	}
+	
+	/**
 	 * Generate a new universally unique ID for a user
 	 * @return	uuid
 	 */
@@ -135,4 +143,5 @@ public class Bank {
 		//if we don't find the user or have an incorrect pin
 		return null;
 	}
+	
 }
