@@ -52,9 +52,9 @@ public class Account {
 		
 		// format the summary line, depending on the whether the balance is negative
 		if (balance >= 0) {
-			return String.format("%s : $%.02f : %s", this.uuid, balance, this.name);
+			return String.format("%s : $%.2f : %s", this.uuid, balance, this.name);
 		} else {
-			return String.format("%s : $(%.02f) : %s", this.uuid, balance, this.name);
+			return String.format("%s : $(%.2f) : %s", this.uuid, balance, this.name);
 		}
 	}
 	
@@ -89,7 +89,7 @@ public class Account {
 	public void printTransHistory() {
 		System.out.printf("\nTransaction history for account %s\n", this.uuid);
 		for (int t = this.transactions.size() - 1; t >= 0; t--) {
-			System.out.printf(this.transactions.get(t).getSummaryLine());
+			System.out.println(this.transactions.get(t).getSummaryLine());
 		}
 		System.out.println();
 	}
