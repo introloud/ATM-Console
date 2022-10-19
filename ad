@@ -1,0 +1,23 @@
+[33mcommit 05cba93f1441a3663955cee7b28b35925d27a545[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: introloud <s_malla156680@fanshaweonline.ca>
+Date:   Tue Oct 18 21:36:07 2022 -0400
+
+    added getNewUserUUID() and getNewAccountUUID() methods
+
+[33mcommit a3299542cc4209441fb32346f370038c01197d29[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: introloud <s_malla156680@fanshaweonline.ca>
+Date:   Tue Oct 18 21:10:28 2022 -0400
+
+    added User constructor and addAccount method
+
+[33mcommit 574cb0d8d45da2b70610b68d1e8356793b0d332a[m
+Author: introloud <s_malla156680@fanshaweonline.ca>
+Date:   Tue Oct 18 19:09:18 2022 -0400
+
+    initialized data members and added User constructor
+
+[33mcommit f1c815f50fa18b75c4c0a70206cee4050fbcb6a3[m
+Author: introloud <s_malla156680@fanshaweonline.ca>
+Date:   Tue Oct 18 18:31:36 2022 -0400
+
+    initial commit
