@@ -2,7 +2,7 @@
 
 This is a console application that gives you simulation of a real ATM machine. It is made in Java and has been implemented with fundamental OOP concepts.
 
-![console-image](/src/img/console.png "console image")
+![console-image](./img/console.png "console image")
 
 ## Some key features
 - You can instantiate an object of User to create a new user with its ID and pin.
