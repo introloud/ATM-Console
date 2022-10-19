@@ -1,3 +1,9 @@
+/*
+ * Coder: Shashwat Malla
+ * Date: 10-18-2022
+ * Program: Transaction.java
+ * Purpose: Holds the data members and methods belonging to a particular transaction
+ */
 import java.util.Date;
 
 public class Transaction {

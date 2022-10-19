@@ -1,3 +1,10 @@
+/*
+ * Coder: Shashwat Malla
+ * Date: 10-18-2022
+ * Program: ATM.java
+ * Purpose: Main class of the ATM console machine.
+ */
+
 import java.util.Scanner;
 
 public class ATM {

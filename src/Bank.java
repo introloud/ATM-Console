@@ -1,3 +1,10 @@
+/*
+ * Coder: Shashwat Malla
+ * Date: 10-18-2022
+ * Program: Bank.java
+ * Purpose: Holds the data members and methods belonging to a particular bank
+ */
+
 import java.util.ArrayList;
 import java.util.Random;
 

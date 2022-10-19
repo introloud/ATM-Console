@@ -1,3 +1,10 @@
+/*
+ * Coder: Shashwat Malla
+ * Date: 10-18-2022
+ * Program: User.java
+ * Purpose: Holds the data members and methods belonging to a particular user
+ */
+
 import java.util.ArrayList;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

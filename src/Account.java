@@ -1,3 +1,10 @@
+/*
+ * Coder: Shashwat Malla
+ * Date: 10-18-2022
+ * Program: Account.java
+ * Purpose: Holds the data members and methods belonging to a particular account
+ */
+
 import java.util.ArrayList;
 
 public class Account {
